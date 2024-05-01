@@ -1,0 +1,16 @@
+resources:
+  - ../../base/
+patches:
+  - target:
+      kind: Pod
+      name: nginx
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: jupyter-notebook
+
+      - op: replace
+        path: /spec/containers/0
+        value:
+          name: jupyter-notebook
+          image: "quay.io/jupyter/base-notebook:latest"

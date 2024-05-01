@@ -1,0 +1,5 @@
+resources:
+  - role.yml
+  - rolebinding.yml
+  - sa.yml
+  - userspace-sidecar.yml
